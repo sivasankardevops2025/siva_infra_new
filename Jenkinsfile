@@ -7,14 +7,14 @@ pipeline {
     }
 
     stages {
-
+        /*    
         stage('Checkout') {
             steps {
                 git branch: "${env.BRANCH_NAME}",
                     url: 'git@github.com:sivasankardevops2025/siva_infra_new.git'
             }
         }
-
+        */
         stage('Terraform Init') {
             steps {
                 dir("${TF_WORKDIR}") {
