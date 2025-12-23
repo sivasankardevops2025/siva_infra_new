@@ -11,7 +11,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 git branch: "${env.BRANCH_NAME}",
-                    url: 'git@github.com:sivasankardevops2025/siva-infra-pipeline.git'
+                    url: 'git@github.com:sivasankardevops2025/siva_infra_new.git'
             }
         }
 
