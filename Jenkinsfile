@@ -15,7 +15,7 @@ pipeline {
             }
         }
         */
-        stage('Terraform Init') {
+        stage('terraform init -reconfigure') {
             steps {
                 dir("${TF_WORKDIR}") {
                     sh 'terraform init'
