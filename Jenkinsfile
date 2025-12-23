@@ -15,13 +15,14 @@ pipeline {
             }
         }
         */
-        stage('terraform init -reconfigure') {
-            steps {
-                dir("${TF_WORKDIR}") {
-                    sh 'terraform init'
-                }
-            }
+        stage('Terraform Init') {
+    steps {
+        dir('environments/dev') {
+            // The flag MUST be inside the quotes here
+            sh 'terraform init -reconfigure' 
         }
+    }
+}
 
         stage('Terraform Plan') {
             steps {
